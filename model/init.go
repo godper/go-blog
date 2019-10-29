@@ -73,7 +73,9 @@ func migration(db *gorm.DB) {
 		AutoMigrate(&User{}).
 		AutoMigrate(&Article{}).
 		AutoMigrate(&Topic{}).
-		AutoMigrate(&Admin{})
+		AutoMigrate(&Admin{}).
+		AutoMigrate(&ArticleTag{}).
+		AutoMigrate(&Tag{})
 }
 
 // updateTimeStampForCreateCallback will set `CreatedAt`, `UpdatedAt` when creating
